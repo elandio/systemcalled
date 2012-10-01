@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="HibernateTools project3" default="_start_">
+	<property name="mappingPath" location="./"/>
+	<property name="projectPath" location="../"/>
+
+	<path id="toolslib">
+		<fileset dir="${mappingPath}/lib">
+			<include name="*.jar"/>
+		</fileset>
+	</path>
+
+	<taskdef name="hibernatetool"
+	         classname="org.hibernate.tool.ant.HibernateToolTask"
+	         classpathref="toolslib" />
+
+	<target name="_start_">
+		<hibernatetool destdir="${projectPath}/src">
+			<jdbcconfiguration detectmanytomany="true" configurationfile="hibernate.cfg.xml" packagename="negocio.basica" />
+			<hbm2java templatepath="${projectPath}/mapping/template/Pojo.ftl"/>					
+			<hbm2dao/>
+			<hbm2hbmxml/>
+			<!--<hbm2doc/>-->
+			<hbm2cfgxml/>
+		</hibernatetool>
+		<hibernatetool destdir="${projectPath}/src">
+			<jdbcconfiguration detectmanytomany="false" configurationfile="hibernate.cfg.xml" packagename="negocio.controlador" />
+			<hbmtemplate templatepath="${projectPath}/mapping/template" template="controlador.ftl" filepattern="{package-name}/Controlador{class-name}.java"/>
+		</hibernatetool>
+
+	</target>
+
+</project>

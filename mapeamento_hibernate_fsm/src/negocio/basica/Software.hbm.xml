@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 24/09/2012 21:42:03 by Hibernate Tools 3.2.0.CR1 -->
+<hibernate-mapping>
+    <class name="negocio.basica.Software" table="software" schema="public">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="computador" class="negocio.basica.Computador" fetch="select">
+            <column name="computador_id" not-null="true" />
+        </many-to-one>
+        <property name="tipo" type="string">
+            <column name="tipo" length="20" />
+        </property>
+        <property name="nome" type="string">
+            <column name="nome" length="45" />
+        </property>
+        <property name="dtcompra" type="date">
+            <column name="dtcompra" length="13" />
+        </property>
+        <property name="dttermino" type="date">
+            <column name="dttermino" length="13" />
+        </property>
+        <property name="serial" type="string">
+            <column name="serial" length="45" />
+        </property>
+        <property name="livre" type="java.lang.Character">
+            <column name="livre" length="1" />
+        </property>
+    </class>
+</hibernate-mapping>
