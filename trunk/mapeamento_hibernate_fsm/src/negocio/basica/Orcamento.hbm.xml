@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 24/09/2012 21:42:03 by Hibernate Tools 3.2.0.CR1 -->
+<hibernate-mapping>
+    <class name="negocio.basica.Orcamento" table="orcamento" schema="public">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <property name="empresa" type="string">
+            <column name="empresa" length="20" />
+        </property>
+        <property name="produto" type="string">
+            <column name="produto" length="45" />
+        </property>
+        <property name="valor" type="java.lang.Double">
+            <column name="valor" precision="17" scale="17" />
+        </property>
+        <property name="dtvalidade" type="date">
+            <column name="dtvalidade" length="13" />
+        </property>
+        <property name="qtde" type="java.lang.Integer">
+            <column name="qtde" />
+        </property>
+        <set name="chamados" inverse="true">
+            <key>
+                <column name="orcamento_id" not-null="true" />
+            </key>
+            <one-to-many class="negocio.basica.Chamado" />
+        </set>
+    </class>
+</hibernate-mapping>

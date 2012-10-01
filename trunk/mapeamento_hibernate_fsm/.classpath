@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+	<classpathentry kind="lib" path="mapping/lib/bsh-2.0b1.jar"/>
+	<classpathentry kind="lib" path="mapping/lib/commons-collections-3.1.jar"/>
+	<classpathentry kind="lib" path="mapping/lib/commons-logging-1.1.jar"/>
+	<classpathentry kind="lib" path="mapping/lib/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="mapping/lib/ejb3-persistence.jar"/>
+	<classpathentry kind="lib" path="mapping/lib/freemarker.jar"/>
+	<classpathentry kind="lib" path="mapping/lib/hibernate-annotations.jar"/>
+	<classpathentry kind="lib" path="mapping/lib/hibernate-commons-annotations.jar"/>
+	<classpathentry kind="lib" path="mapping/lib/hibernate-tools.jar"/>
+	<classpathentry kind="lib" path="mapping/lib/hibernate3.jar"/>
+	<classpathentry kind="lib" path="mapping/lib/jtidy-r8-20060801.jar"/>
+	<classpathentry kind="lib" path="mapping/lib/postgresql-8.3dev-600.jdbc3.jar"/>
+	<classpathentry kind="lib" path="mapping/lib/spring-test.jar"/>
+	<classpathentry kind="lib" path="mapping/lib/spring.jar"/>
+	<classpathentry kind="lib" path="mapping/lib/log4j-1.2.15.jar"/>
+	<classpathentry kind="lib" path="mapping/lib/cglib-nodep-2.1_3.jar"/>
+	<classpathentry kind="lib" path="mapping/lib/jta.jar"/>
+	<classpathentry kind="lib" path="mapping/lib/jaxrpc.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
