@@ -11,24 +11,28 @@ import negocio.controlador.ControladorChamado;
 public class ApresentacaoChamado {
 
 	public static void main(String[] args) {
-		ControladorChamado contcha = new ControladorChamado();
-		Chamado cha = new Chamado();
-		
-		Tipochamado tc = new Tipochamado();
-		tc.setId(1);
+		ControladorChamado contCham = new ControladorChamado();
+		Chamado cham = new Chamado();
+		Tipochamado tipoCham = new Tipochamado();
 		Orcamento orc = new Orcamento();
-		orc.setId(1);
 		Funcionario func = new Funcionario();
+		
+		tipoCham.setId(1);
+		orc.setId(1);
 		func.setId(1);
 		
-		cha.setId(1);
-		cha.setTipochamado(tc);
-		cha.setOrcamento(orc);
-		cha.setFuncionario(func);
-		cha.setDescricao("Chamado 001");
-		cha.setDtchamado(new Date());
-		cha.setObservacao("nao funciona");
+		cham.setId(1);
+		cham.setTipochamado(tipoCham);
+		cham.setOrcamento(orc);
+		cham.setFuncionario(func);
+		cham.setNome("Thiago Lins");
+		cham.setOrigem("Finanças");
+		cham.setSituacao("Aberto");
+		cham.setDescricao("Computador apresentando problema no carregamento do sistema");
+		cham.setDtchamado(new Date());
+		cham.setObservacao("Solicito urgência no atendimento");
+		cham.setComputadors(null);
 		
+		contCham.incluir(cham);
 	}
-
 }
