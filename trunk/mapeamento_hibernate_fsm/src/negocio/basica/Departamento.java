@@ -59,9 +59,6 @@ public class Departamento  implements java.io.Serializable {
         this.funcionarios = funcionarios;
     }
 
-
-
-
 }
 
 
