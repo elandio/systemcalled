@@ -9,9 +9,10 @@ import negocio.controlador.ControladorHardware;
 public class ApresentacaoHardware {
 
 public static void main (String [] args){
-	ControladorHardware conthard = new ControladorHardware();
+	ControladorHardware contHard = new ControladorHardware();
 	Hardware hard = new Hardware();
 	Computador computador = new Computador();
+	
 	computador.setId(1);
 		
 	hard.setId(1);
@@ -20,6 +21,8 @@ public static void main (String [] args){
 	hard.setGarantia("1 ano");
 	hard.setDtcompra(new Date());
 	hard.setComputador(computador);
+	
+	contHard.incluir(hard);
 	
 	}
 }

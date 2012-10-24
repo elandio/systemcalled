@@ -3,6 +3,7 @@ package negocio.apresentacao;
 import java.util.Date;
 
 import negocio.basica.Chamado;
+import negocio.basica.Computador;
 import negocio.basica.Funcionario;
 import negocio.basica.Orcamento;
 import negocio.basica.Tipochamado;
@@ -16,11 +17,13 @@ public class ApresentacaoChamado {
 		Tipochamado tipoCham = new Tipochamado();
 		Orcamento orc = new Orcamento();
 		Funcionario func = new Funcionario();
-		
+		Computador computadors = new Computador();
+
 		tipoCham.setId(1);
 		orc.setId(1);
 		func.setId(1);
-		
+		computadors.setId(1);
+
 		cham.setId(1);
 		cham.setTipochamado(tipoCham);
 		cham.setOrcamento(orc);
@@ -32,7 +35,7 @@ public class ApresentacaoChamado {
 		cham.setDtchamado(new Date());
 		cham.setObservacao("Solicito urgência no atendimento");
 		cham.setComputadors(null);
-		
+
 		contCham.incluir(cham);
 	}
 }

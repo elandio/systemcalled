@@ -6,19 +6,19 @@ import negocio.controlador.ControladorDepartamento;
 
 public class ApresentacaoDepartamento {
 
-	public static void main (String[] args){
-		ControladorDepartamento contdept = new ControladorDepartamento();
+	public static void main(String[] args) {
+		ControladorDepartamento compDept = new ControladorDepartamento();
 		Departamento dept = new Departamento();
+		Funcionario funcionarios = new Funcionario();
 		
-		Funcionario func = new Funcionario();
-		func.setId(1);
+		funcionarios.setId(1);
 		
 		dept.setId(1);
-		dept.setNome("FC");
-		dept.setDescricao("Contabilidde");
-		dept.setFuncionarios(func);
-		contdept.incluir(dept);
-
+		dept.setNome("Finanças");
+		dept.setDescricao("Departamendo de Finanças");
+		dept.setFuncionarios(null);
+		
+		compDept.alterar(dept);
 	}
-	
+
 }
