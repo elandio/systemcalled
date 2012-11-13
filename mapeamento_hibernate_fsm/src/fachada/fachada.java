@@ -25,8 +25,8 @@ import negocio.controlador.ControladorTipochamado;
 
 public class fachada {
 	private ControladorChamado contChamado = null;
-	private ControladorComputador contComputador =null;
-	private ControladorDepartamento contDepartamento =null;
+	private ControladorComputador contComputador = null;
+	private ControladorDepartamento contDepartamento = null;
 	private ControladorFuncionario contFuncionario = null;
 	private ControladorHardware contHardware = null;
 	private ControladorMonitor contMonitor = null;
@@ -35,6 +35,18 @@ public class fachada {
 	private ControladorSoftware contSoftware = null;
 	private ControladorTipochamado contTipoChamado = null;
 		
+	public fachada() {
+		contChamado = new ControladorChamado();
+		contComputador = new ControladorComputador();
+		contDepartamento = new ControladorDepartamento();
+		contFuncionario = new ControladorFuncionario();
+		contHardware = new ControladorHardware();
+		contMonitor = new ControladorMonitor();
+		contOrcamento = new ControladorOrcamento();
+		contPrivilegio = new ControladorPrivilegio();
+		contPrivilegio = new ControladorPrivilegio();
+		contTipoChamado = new ControladorTipochamado();
+	}
 	
 	public void incluirComputador(Computador pComputador) {
 		contComputador.incluir(pComputador);
@@ -188,10 +200,6 @@ public class fachada {
 		contChamado.alterar(pChamado);
 	}
 
-	public int hashCode() {
-		return contChamado.hashCode();
-	}
-
 	public void removerChamado(Chamado pChamado) {
 		contChamado.remover(pChamado);
 	}
@@ -204,13 +212,6 @@ public class fachada {
 		return contChamado.listar();
 	}
 
-	public boolean equals(Object obj) {
-		return contChamado.equals(obj);
-	}
 
-	public String toString() {
-		return contChamado.toString();
-	}
-	
 
 }
